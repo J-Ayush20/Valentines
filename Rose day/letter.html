@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For You ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@300;400;600&family=Dancing+Script:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#ffd1dc;
+    font-family:'Cormorant Garamond', serif;
+    overflow-x:hidden;
+}
+
+/* ===== Floating Hearts ===== */
+.hearts{
+    position:fixed;
+    width:100%;
+    height:100%;
+    z-index:0;
+    pointer-events:none;
+}
+
+.heart{
+    position:absolute;
+    bottom:-20px;
+    color:#ff4d88;
+    animation:float 8s linear infinite;
+    opacity:0.6;
+}
+
+@keyframes float{
+    0%{transform:translateY(0) scale(1);}
+    100%{transform:translateY(-110vh) scale(1.6);}
+}
+
+/* ===== Page Layout ===== */
+.page{
+    width:100%;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+    z-index:1;
+    padding:40px 20px;
+}
+
+/* ===== Envelope ===== */
+.envelope-wrapper{
+    cursor:pointer;
+    text-align:center;
+}
+
+.envelope{
+    position:relative;
+    width:260px;
+    height:180px;
+    background:#ff85a2;
+    border-radius:8px;
+    box-shadow:0 15px 30px rgba(0,0,0,0.2);
+}
+
+.envelope:before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    border-left:130px solid transparent;
+    border-right:130px solid transparent;
+    border-top:90px solid #ff5c8a;
+    transform-origin:top;
+    transition:0.6s ease;
+}
+
+.open .envelope:before{
+    transform:rotateX(180deg);
+}
+
+.envelope-text{
+    margin-top:20px;
+    font-family:'Great Vibes', cursive;
+    font-size:2rem;
+    color:#b03060;
+}
+
+/* ===== Hide Letter Initially ===== */
+#letterPage{
+    display:none;
+}
+
+/* ===== Vintage Letter ===== */
+.letter{
+    position:relative;
+    width:100%;
+    max-width:750px;
+    padding:60px 50px;
+    background:rgba(255,248,235,0.93);
+    border-radius:8px;
+    box-shadow:0 25px 60px rgba(0,0,0,0.25);
+}
+
+/* Rose Behind Letter */
+.rose-bg{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    max-width:80%;
+    opacity:0.15;
+    z-index:0;
+    pointer-events:none;
+}
+
+/* Paper texture effect */
+.letter::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:radial-gradient(circle at 20% 30%, rgba(0,0,0,0.04), transparent 40%),
+               radial-gradient(circle at 80% 70%, rgba(0,0,0,0.05), transparent 40%);
+    pointer-events:none;
+}
+
+/* Letter Content */
+.content{
+    position:relative;
+    z-index:1;
+    color:#5a2a27;
+}
+
+.content h2{
+    font-family:'Great Vibes', cursive;
+    font-size:2.8rem;
+    margin-bottom:30px;
+    color:#8b0000;
+}
+
+.content p{
+    font-family:'Dancing Script', cursive;
+    font-size:1.4rem;
+    line-height:2;
+    margin-bottom:25px;
+}
+
+.signature{
+    margin-top:40px;
+    font-size:1.8rem;
+    font-family:'Great Vibes', cursive;
+    text-align:right;
+}
+
+/* Responsive */
+@media(max-width:600px){
+    .letter{
+        padding:40px 25px;
+    }
+
+    .content h2{
+        font-size:2rem;
+    }
+
+    .content p{
+        font-size:1.2rem;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="hearts"></div>
+
+<!-- Welcome Page -->
+<div class="page" id="welcomePage">
+    <div class="envelope-wrapper" onclick="openLetter()">
+        <div class="envelope"></div>
+        <div class="envelope-text">Open Me 💌</div>
+    </div>
+</div>
+
+<!-- Letter Page -->
+<div class="page" id="letterPage">
+    <div class="letter">
+
+        <!-- Use your real rose image file name -->
+        <img src="rose.png" class="rose-bg" alt="Rose">
+
+        <div class="content">
+            <h2>My Dear Stopid Little Baby ❤️</h2>
+
+            <p>
+                Thank you for staying with me and being a part of everything I do,
+                You are the first Girl to have ever treated me this lovingly and with such delicate care ,
+                I am always in your awe and really really care and cherish you.
+            </p>
+
+            <p>
+                We have made a promise to stay together and seeing what the future holds for both of us. 
+                I really love your personality you way of caring for me , your personality ,
+                you way of treating me with love and respect , your being stopid with me.
+                Ohh mannn I can even explain the joy and sunshine
+                you bring into my life my dear little stopidddddd 💗💗💗.
+                I read your letter, I really loved it first time someone has given me such efforts and this something like this for me ,
+                It was unexpexted and so loving I fell for you all over again.
+                Thank you for being this kind to someone like me ,
+                I know I am not that great and all but I promise to be everything you will ever wish for.
+                I will stay with you be it your hard days or be it your happy ones ,
+                I will gladly share anymoment with you my little one.
+                You wrote in your letter "A boy who lives miles away , but feels like home..." 
+                This line touched me really💗 it made me fall in love really 💗😭😭😭😭
+                no one ever did something like this for me 😭😭Thank youuuu!!!!!!!!!
+                It was so lovely 😭😭😭😭. 😭😭😭😭😭😭😭😭😭😭
+                Thank you for staying with meeee.......
+            </p>
+
+            <p>
+                If the World ever feels Heavy , Dark or Gray .
+                I will always be here in Happiness and saddness ,
+                By your side Holding your hand and Embracing you.
+            </p>
+
+            <div class="signature">
+                Your Little Sweet Babyyy Potato😭💕
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+function openLetter(){
+    document.getElementById("welcomePage").style.display="none";
+    document.getElementById("letterPage").style.display="flex";
+    window.scrollTo(0,0);
+}
+
+/* Floating Hearts */
+const heartsContainer=document.querySelector(".hearts");
+
+for(let i=0;i<30;i++){
+    let heart=document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML="❤";
+    heart.style.left=Math.random()*100+"%";
+    heart.style.animationDuration=(5+Math.random()*6)+"s";
+    heart.style.fontSize=(15+Math.random()*25)+"px";
+    heartsContainer.appendChild(heart);
+}
+</script>
+
+</body>
+</html>
